@@ -1,0 +1,41 @@
+name: BattleThrone
+main: net.gizzmo.battlethrone.BattleThrone
+author: gizzmo
+version: 1.0.0
+api-version: 1.8
+
+depend: [Vault]
+softdepend: [PlaceholderAPI, DeluxeCombat, Factions, HolographicDisplays, ProtocolLib]
+
+commands:
+  throneadmin:
+    description: ta
+    usage: /throneadmin axe|create|delete|set|list|reload
+    aliases: [ta, tadmin]
+permissions:
+  battlethrone.*:
+    description:  Access à toutes les commandes.
+    children:
+      battlethrone.throneadmin.*: true
+      battlethrone.throneadmin: true
+  battlethrone.throneadmin.*:
+    description: Access à toutes les commandes d'admin.
+    children:
+      battlethrone.throneadmin.axe: true
+      battlethrone.throneadmin.create: true
+      battlethrone.throneadmin.delete: true
+      battlethrone.throneadmin.set: true
+      battlethrone.throneadmin.list: true
+      battlethrone.throneadmin.reload: true
+  battlethrone.throneadmin.axe:
+    description: Permission requis pour utiliser la commande axe
+  battlethrone.throneadmin.create:
+    description: Permission requis pour utiliser la commande create
+  battlethrone.throneadmin.delete:
+    description: Permission requis pour utiliser la commande delete
+  battlethrone.throneadmin.set:
+    description: Permission requis pour utiliser la commande edit
+  battlethrone.throneadmin.list:
+    description: Permission requis pour utiliser la commande list
+  battlethrone.throneadmin.reload:
+    description: Permission requis pour utiliser la commande reload

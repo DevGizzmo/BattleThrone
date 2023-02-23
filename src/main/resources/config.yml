@@ -1,0 +1,67 @@
+################################################
+#             OmegaPrison                      #
+#           Made by Maliimaloo                 #
+################################################
+
+database:
+  #Database backend type, can be set to mysql or sqlite
+  type: sqlite
+  #MySQL database host
+  mySQLHost: localhost
+  #MySQL connection port number
+  mySQLPort: 3306
+  #MySQL database name
+  mySQLDatabase: db
+  #MySQL database user
+  mySQLUser: "root"
+  #MySQL user's password
+  mySQLPassword: ""
+#
+  tableName:
+    throne: "t_faction_throne"
+#
+# PortocolLib is required for option.
+protocol:
+  visualizer:
+    enable: true
+    intervalSend: 2
+    viewDistance: 10
+    particle:
+      speed: 1.0
+      amount: 10
+#
+blockSwap:
+  from: "gold_block"
+  to: "coal_block"
+#
+item:
+  axe:
+    name: "&7[&6Axe Throne&7] &6Hache de la création."
+    lore:
+      - ""
+      - ""
+#
+hologram:
+  enable: true
+  refreshingDelay: 1
+  messageContest: "&c&lContester"
+  text:
+    - "item:diamond_sword"
+    - "text:&7[&6BattleThrone&7]"
+    - " "
+    - "text:&6&lName: &b&l{battlethrone: <throne>_name}"
+    - "text:&6&lOwner: &b&l{battlethrone: <throne>_owner}"
+    - "text:&6&lCapture Time: &b&l{battlethrone: <throne>_capture_time}"
+#
+reward:
+  money:
+    enable: true
+  command:
+    enable: true
+  message:
+    - "&6&b&lBattleThrone Reward&6"
+    - " &6- &a+ %money_earning%$"
+    - " &6- &ax2 Diamants"
+    - " &6- &ax12 EnderPearls"
+    - " &6- &ax1 Plume +15 minutes"
+    - " "
